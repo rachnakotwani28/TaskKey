@@ -1,0 +1,261 @@
+:root {
+  /* Light Theme (Editorial Feminine & Chic) */
+  --bg-page: #FAF3F0;
+  --bg-canvas: #FFF8F6;
+  --bg-surface: #FFFFFF;
+  --bg-surface-subtle: #FFF0F4;
+  --bg-surface-hover: #FDEAF0;
+  --border-subtle: #F3D7DF;
+  --border-strong: #E5B3C2;
+  
+  --text-main: #3C1623;
+  --text-muted: #7E5968;
+  --text-dim: #A88694;
+  --text-inverted: #FFFFFF;
+  
+  --brand-pink: #E0537A;
+  --brand-pink-dark: #C4365E;
+  --brand-pink-light: #FDE8EE;
+  --brand-rose: #D9466F;
+  --brand-peach: #FFECE5;
+  --brand-blush: #FFE4EC;
+
+  --badge-green-bg: #E8F6ED;
+  --badge-green-text: #1B7A3E;
+  --badge-green-border: #B7E4C7;
+  
+  --badge-red-bg: #FEECEE;
+  --badge-red-text: #C52233;
+  --badge-red-border: #F8B4BD;
+  
+  --badge-warning-bg: #FFF4E5;
+  --badge-warning-text: #B76E00;
+
+  --shadow-sm: 0 2px 8px rgba(196, 54, 94, 0.04);
+  --shadow-md: 0 8px 24px rgba(196, 54, 94, 0.07);
+  --shadow-lg: 0 16px 36px rgba(196, 54, 94, 0.12);
+  --shadow-pop: 0 20px 50px rgba(60, 22, 35, 0.18);
+  
+  --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+}
+
+[data-theme="dark"] {
+  /* Dark Theme (Sophisticated, Luxurious Charcoal & Muted Dusty Pink) */
+  --bg-page: #120D12;
+  --bg-canvas: #160F15;
+  --bg-surface: #1E161D;
+  --bg-surface-subtle: #2A1D28;
+  --bg-surface-hover: #352332;
+  --border-subtle: #3E2839;
+  --border-strong: #59354F;
+  
+  --text-main: #FBF4F7;
+  --text-muted: #B89EA9;
+  --text-dim: #7F6572;
+  --text-inverted: #120D12;
+  
+  --brand-pink: #E85A7E;
+  --brand-pink-dark: #FF7096;
+  --brand-pink-light: #381E2C;
+  --brand-rose: #FA6B90;
+  --brand-peach: #36222A;
+  --brand-blush: #2C1823;
+
+  --badge-green-bg: #142E1F;
+  --badge-green-text: #4EBA75;
+  --badge-green-border: #1E4D2F;
+  
+  --badge-red-bg: #35151A;
+  --badge-red-text: #FF6675;
+  --badge-red-border: #561E28;
+  
+  --badge-warning-bg: #352514;
+  --badge-warning-text: #FFB347;
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 16px 36px rgba(0, 0, 0, 0.6);
+  --shadow-pop: 0 20px 50px rgba(0, 0, 0, 0.7);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.25s ease, border-color 0.25s ease, color 0.2s ease, box-shadow 0.25s ease;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--text-main);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+/* Custom chic scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-canvas);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--brand-pink);
+}
+
+/* Glassmorphism & Card Utilities */
+.card-chic {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 16px;
+  box-shadow: var(--shadow-sm);
+}
+
+.card-chic-hover:hover {
+  border-color: var(--brand-pink);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.btn-pink-primary {
+  background: var(--brand-pink);
+  color: #FFFFFF;
+  border: none;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 4px 14px rgba(224, 83, 122, 0.35);
+  transition: all 0.2s ease;
+}
+.btn-pink-primary:hover {
+  background: var(--brand-pink-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(224, 83, 122, 0.45);
+}
+.btn-pink-primary:active {
+  transform: translateY(0);
+}
+
+.btn-pink-secondary {
+  background: var(--brand-pink-light);
+  color: var(--brand-pink);
+  border: 1px solid var(--border-subtle);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+.btn-pink-secondary:hover {
+  background: var(--brand-pink);
+  color: #FFFFFF;
+  border-color: var(--brand-pink);
+}
+
+.btn-outline-subtle {
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px solid var(--border-subtle);
+  font-family: var(--font-body);
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+.btn-outline-subtle:hover {
+  border-color: var(--brand-pink);
+  color: var(--brand-pink);
+  background: var(--bg-surface-subtle);
+}
+
+.btn-kill-switch {
+  background: linear-gradient(135deg, #E53935 0%, #C62828 100%);
+  color: #FFFFFF;
+  border: none;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  padding: 10px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 16px rgba(198, 40, 40, 0.4);
+  animation: pulse-danger 2.5s infinite;
+}
+.btn-kill-switch:hover {
+  background: #B71C1C;
+  transform: scale(1.02);
+}
+
+@keyframes pulse-danger {
+  0% { box-shadow: 0 0 0 0 rgba(229, 57, 53, 0.5); }
+  70% { box-shadow: 0 0 0 10px rgba(229, 57, 53, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(229, 57, 53, 0); }
+}
+
+/* Pulsing badge */
+.pulse-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #2E7D32;
+  box-shadow: 0 0 0 rgba(46, 125, 50, 0.4);
+  animation: pulse-green 2s infinite;
+}
+@keyframes pulse-green {
+  0% { box-shadow: 0 0 0 0 rgba(46, 125, 50, 0.7); }
+  70% { box-shadow: 0 0 0 6px rgba(46, 125, 50, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(46, 125, 50, 0); }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.35s ease-out forwards;
+}
+
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.92); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-pop-in {
+  animation: popIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
